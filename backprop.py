@@ -1,4 +1,14 @@
+"""
+PSYCH 420: Backpropagation
+
+To customize number of epochs (training cycles) and/or the alpha (learning rate), please add arguments when running. 
+The below are using the default values: 
+    -e=10000 --epochs=10000
+    -a=0.1 --alpha=0.1
+"""
 import numpy as np
+import argparse
+import sys
 
 # Activation functions and their derivatives
 def sigmoid(x):
@@ -32,7 +42,7 @@ class NeuralNetwork:
             self.weights[i] -= learning_rate * np.dot(deltas[i], activations[i].T)
             self.biases[i] -= learning_rate * deltas[i]
 
-    def train(self, X, Y, epochs=10000, learning_rate=0.1):
+    def train(self, X, Y, epochs, learning_rate):
         for epoch in range(epochs):
             for x, y in zip(X, Y):
                 x, y = x.reshape(-1, 1), y.reshape(-1, 1) # convert to col vector (-1 means infer)
@@ -48,12 +58,12 @@ class NeuralNetwork:
         return np.array([self.forward(x.reshape(-1, 1))[-1].flatten() for x in X])
 
 # XOR-specific training
-def train_xor():
+def train_xor(epochs, learning_rate):
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     Y = np.array([[0], [1], [1], [0]])
     
     nn = NeuralNetwork([2, 3, 1])  # 2 input neurons, 3 hidden, 1 output
-    nn.train(X, Y, epochs=10000, learning_rate=0.1)
+    nn.train(X, Y, epochs, learning_rate)
     
     predictions = nn.predict(X)
     print("Final Predictions:")
@@ -63,8 +73,20 @@ def train_xor():
 def initialize_network(n_inputs, n_hidden, n_outputs):
     network = list()
 
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-a", "--alpha", type=float, default=0.1)
+    parser.add_argument("-e", "--epochs", type=int, default=10000)
+    return parser.parse_args()
+
 def main():
-    train_xor()
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "--help" or sys.argv[1] == "-h":
+            print(__doc__)
+            sys.exit(1)
+    args = parse_arguments()
+    
+    train_xor(args.epochs, args.alpha)
 
 if __name__ == "__main__":
     main()
