@@ -11,6 +11,7 @@ adding test line
 3. Activate the virtual environment `source env/bin/activate`
 4. Check list of packages installed in virtual env `pip list`
 5. Install required dependenciesi `pip install -r requirements.txt`
-6. To deactivate the virtual env, `deactivate`
+6. Run program `python3 backprop.py`
+7. To deactivate the virtual env, `deactivate`
 
 Note: to update requirements.txt, `pip freeze > requirements.txt`
