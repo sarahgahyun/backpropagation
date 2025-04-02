@@ -2,8 +2,6 @@
 
 PSYCH420 final project
 
-adding test line
-
 ### Set up
 
 1. Go into your project directory (command `cd`)
