@@ -15,7 +15,7 @@ def train_xor(epochs, learning_rate):
     for x, p in zip(X, predictions):
         print(f"Input: {x} => Predicted Output: {p[0]:.4f}")
     
-    plot_mse(mses)
+    plot_mse(mses, "XOR Logic Gate")
 
 # AND-specific training
 def train_and(epochs, learning_rate):
@@ -30,5 +30,5 @@ def train_and(epochs, learning_rate):
     for x, p in zip(X, predictions):
         print(f"Input: {x} => Predicted Output: {p[0]:.4f}")
 
-    plot_mse(mses)
+    plot_mse(mses, "AND Logic Gate")
     

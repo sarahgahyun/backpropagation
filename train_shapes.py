@@ -18,7 +18,7 @@ def train_shapes(epochs, learning_rate):
         print(f"Predicted {p} <= Expected {y}")
     print()
 
-    plot_mse(mses)
+    plot_mse(mses, "Shapes")
 
 
 # Flattened 4x4 grayscale images of shapes
