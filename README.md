@@ -1,6 +1,6 @@
-# backpropagation
+# Backpropagation
 
-PSYCH420 final project
+**PSYCH420 final project**
 
 To see this .md file in preview mode on VSCode, `ctrl + shift + v` or for Mac, `cmd + shift + v`
 
