@@ -2,6 +2,8 @@
 
 PSYCH420 final project
 
+To see this .md file in preview mode on VSCode, `ctrl + shift + v` or for Mac, `cmd + shift + v`
+
 ## Set up
 
 To run code: `python3 backprop.py`
