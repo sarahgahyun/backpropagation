@@ -2,9 +2,14 @@
 
 PSYCH420 final project
 
-### Set up
+## Set up
 
-1. Go into your project directory (command `cd`)
+To run code: `python3 backprop.py`
+To see help: `python3 backprop.py -h`
+
+### Set up virtual environment (may not be necessary if you have matplotlib installed already)
+
+1. Go into your project directory in the terminal
 2. Create a virtual environment (this will create a directory called env)`python3 -m venv env`
 3. Activate the virtual environment `source env/bin/activate`
 4. Check list of packages installed in virtual env `pip list`
