@@ -22,7 +22,7 @@ class NeuralNetwork:
 
     def update_weights(self, activations, deltas, learning_rate):
         for i in range(len(self.weights)):
-            self.weights[i] -= learning_rate * np.dot(deltas[i], activations[i].T)
+            self.weights[i] -= learning_rate * np.dot(deltas[i], activations[i].T) # gradient of loss
             self.biases[i] -= learning_rate * deltas[i]
 
     def train(self, X, Y, epochs, learning_rate):
@@ -36,7 +36,7 @@ class NeuralNetwork:
                 self.update_weights(activations, deltas, learning_rate)
             
             if epoch % 100 == 0:
-                mse = np.mean((self.predict(X) - Y) ** 2)
+                mse = np.mean((self.predict(X) - Y) ** 2) # use mse as cost function
                 mse_list.append(mse)
             if epoch % 1000 == 0:
                 mse = np.mean((self.predict(X) - Y) ** 2)
