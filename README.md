@@ -5,6 +5,7 @@ PSYCH420 final project
 ## Set up
 
 To run code: `python3 backprop.py`
+
 To see help: `python3 backprop.py -h`
 
 ### Set up virtual environment (may not be necessary if you have matplotlib installed already)
