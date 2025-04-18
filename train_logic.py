@@ -22,7 +22,7 @@ def train_and(epochs, learning_rate):
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     Y = np.array([[0], [0], [0], [1]])  
     
-    nn = NeuralNetwork([2, 1])  # 2 input neurons, 3 hidden, 1 output
+    nn = NeuralNetwork([2, 1])  # 2 input neurons, 1 output
     mses = nn.train(X, Y, epochs, learning_rate)
 
     predictions = nn.predict(X)
