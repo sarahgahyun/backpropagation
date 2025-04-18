@@ -51,7 +51,7 @@ square4 = np.array([
     [0, 0, 0, 0]
 ]).flatten()
 
-# TRIANGES
+# TRIANGLES
 triangle = np.array([
     [0, 0, 0, 1],
     [0, 0, 1, 1],
@@ -90,7 +90,7 @@ cross = np.array([
 
 cross2 = np.array([
     [0, 0, 1, 0],
-    [1, 1, 1, 1],
+    [0, 1, 1, 1],
     [0, 0, 1, 0],
     [0, 0, 1, 0]
 ]).flatten()
@@ -98,13 +98,13 @@ cross2 = np.array([
 cross3 = np.array([
     [0, 0, 1, 0],
     [0, 0, 1, 0],
-    [1, 1, 1, 1],
+    [0, 1, 1, 1],
     [0, 0, 1, 0]
 ]).flatten()
 
 cross4 = np.array([
     [0, 1, 0, 0],
     [0, 1, 0, 0],
-    [1, 1, 1, 1],
+    [1, 1, 1, 0],
     [0, 1, 0, 0]
 ]).flatten()
